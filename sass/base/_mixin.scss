@@ -1,0 +1,26 @@
+button{
+    all: unset;
+    &:hover{
+        cursor: pointer;
+    }
+}
+a{
+    text-decoration: none;
+    &:hover{
+        cursor: pointer;
+        color: $main-color;
+    }
+}
+body{
+    margin: 0px;
+    font-family: $main-font;    
+}
+header{
+    font-family: $main-font;
+}
+input{
+    all: unset;
+}
+.option_buy{
+    background-color: $main-color;
+}

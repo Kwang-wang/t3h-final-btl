@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap");
+button {
+  all: unset;
+}
+button:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+  color: #FE6A84;
+}
+
+body {
+  margin: 0px;
+  font-family: "Quicksand", sans-serif;
+}
+
+header {
+  font-family: "Quicksand", sans-serif;
+}
+
+input {
+  all: unset;
+}
+
+.option_buy {
+  background-color: #FE6A84;
+}
+
+.header {
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
+  height: 110px;
+}
+.header-top {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #FE6A84;
+}
+.header-top-left {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #858484;
+  margin-left: 11%;
+}
+.header-top-left svg {
+  vertical-align: middle;
+  margin-right: 8px;
+  margin-top: 2px;
+  transition: all 0.5s;
+}
+.header-top-left svg:hover {
+  transform: rotate(720deg);
+  cursor: pointer;
+}
+.header-top-left a {
+  text-decoration: none;
+  color: #858484;
+}
+.header-top-left a:hover {
+  color: #FE6A84;
+}
+.header-top-left div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 11px;
+  margin-right: 4%;
+}
+.header-top-right {
+  width: 50%;
+}
+.header-top-right button {
+  margin-top: 1.5px;
+  margin-left: 20%;
+  border-radius: 18px;
+  border: 2px solid #FE6A84;
+  display: flex;
+  align-items: center;
+  height: 16px;
+  padding: 8px 20px;
+  background: #FE6A84;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+.header-top-right button:hover {
+  color: #FE6A84;
+  background: white;
+}
+
+.modal_info_input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Quicksand", sans-serif;
+}
+.modal_info_input h3 {
+  color: #FE6A84;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+.modal_info_input p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FE6A84;
+  margin-left: -22%;
+}
+.modal_info_input .input_tag {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.modal_info_input .input_tag #tag_info {
+  height: 42px;
+  width: 44%;
+  margin: 1.5%;
+  border: 1px solid #D8D8D8;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+.modal_info_input .input_tag #tag_info h6 {
+  margin-top: 1.5%;
+  margin-left: 3%;
+  position: absolute;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #858484;
+  z-index: 1;
+}
+.modal_info_input .input_tag #tag_info input {
+  margin-top: 0.5%;
+  margin-left: 8%;
+  z-index: 2;
+}
+.modal_info_input .input_tag #loinhan1 {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5%;
+  margin-left: 1.5%;
+  width: 91.5%;
+  border: 1px solid #D8D8D8;
+  border-radius: 20px;
+  height: 60px;
+}
+.modal_info_input .input_tag #loinhan1 h6 {
+  margin-left: 3%;
+  position: absolute;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #858484;
+  z-index: 1;
+}
+.modal_info_input .input_tag #loinhan1 input {
+  margin-left: 4%;
+  margin-bottom: 2%;
+  width: 95%;
+  height: 80%;
+  z-index: 2;
+}
+.modal_info_input .option1, .modal_info_input .option2 {
+  margin-top: 4%;
+  margin-left: -6%;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.modal_info_input .option1-text, .modal_info_input .option2-text {
+  display: flex;
+  flex-direction: row;
+}
+.modal_info_input .option1-text .icon, .modal_info_input .option2-text .icon {
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #FE6A84;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal_info_input .option1-text .icon-inner, .modal_info_input .option2-text .icon-inner {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+.modal_info_input .option1-text .icon-inner:hover, .modal_info_input .option2-text .icon-inner:hover {
+  cursor: pointer;
+}
+.modal_info_input .option1-text h6, .modal_info_input .option2-text h6 {
+  margin-left: 3%;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #5A5A5A;
+}
+.modal_info_input .option1 .seller_address, .modal_info_input .option2 .seller_address {
+  margin-left: 8.5%;
+  width: 92.5%;
+  height: 40px;
+  border: 1px solid #D8D8D8;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+.modal_info_input .option1 .seller_address h6, .modal_info_input .option2 .seller_address h6 {
+  margin-top: 1.7%;
+  margin-left: 3%;
+  position: absolute;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #858484;
+}
+.modal_info_input .option1 .seller_address input, .modal_info_input .option2 .seller_address input {
+  margin-left: 3.7%;
+}
+.modal_info_input .option2 .seller_address input {
+  z-index: 2;
+}
+.modal_info_input .option2 .seller_address h6 {
+  z-index: 1;
+}
+.modal_info_input button {
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 92%;
+  height: 48px;
+  background: #FE6A84;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  border-radius: 24px;
+}
+.modal_info_input button:hover {
+  color: #FE6A84;
+  background: white;
+  border: 2px solid #FE6A84;
+}
+
+/*# sourceMappingURL=style.css.map */
