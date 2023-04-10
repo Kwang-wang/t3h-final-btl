@@ -31,20 +31,42 @@ input {
   background-color: #FE6A84;
 }
 
+.hover_button {
+  background: white;
+  color: #FE6A84;
+}
+
+.mouseleave {
+  background: #FE6A84;
+  color: white;
+}
+
+@keyframes zoom-in-out {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .header {
   font-family: "Quicksand", sans-serif;
-  width: 100%;
+  width: 1440px;
   height: 110px;
 }
 .header-top {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 40px;
+  height: 50px;
   border-bottom: 1px solid #FE6A84;
+  align-items: center;
 }
 .header-top-left {
-  width: 50%;
+  margin-bottom: 11px;
   display: flex;
   flex-direction: row;
   font-weight: 600;
@@ -52,6 +74,7 @@ input {
   line-height: 18px;
   color: #858484;
   margin-left: 11%;
+  margin-right: 20%;
 }
 .header-top-left svg {
   vertical-align: middle;
@@ -64,6 +87,7 @@ input {
   cursor: pointer;
 }
 .header-top-left a {
+  transition: all 0.2s linear;
   text-decoration: none;
   color: #858484;
 }
@@ -77,26 +101,241 @@ input {
   margin-top: 11px;
   margin-right: 4%;
 }
+.header-top-left .phone_number a {
+  width: 85px;
+}
+.header-top-left .mail a {
+  width: 173px;
+}
+.header-top-left .work_time {
+  width: 158px;
+}
 .header-top-right {
-  width: 50%;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .header-top-right button {
-  margin-top: 1.5px;
-  margin-left: 20%;
+  transition: all 0.2s linear;
+  width: 62px;
+  margin-top: 1.2px;
+  margin-bottom: 0.5%;
   border-radius: 18px;
   border: 2px solid #FE6A84;
   display: flex;
   align-items: center;
   height: 16px;
   padding: 8px 20px;
-  background: #FE6A84;
-  color: white;
   font-weight: 600;
   font-size: 14px;
+  animation: zoom-in-out 2s infinite;
 }
-.header-top-right button:hover {
+.header-top-right .cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 28px;
+  flex-wrap: nowrap;
+  margin-right: 150px;
+  margin-left: 13px;
+}
+.header-top-right .cart:hover {
+  cursor: pointer;
+}
+.header-top-right .cart div {
+  right: 15px;
+  position: relative;
+  padding: 9px;
+  border: 1.5px solid #FFFFFF;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: #FE6A84;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.header-top-right .cart div h6 {
+  font-weight: 600;
+  font-size: 10px;
+  color: white;
+  line-height: 0px;
+}
+.header-bottom {
+  width: 1440px;
+  height: 70px;
+  display: flex;
+  outline: none;
+  align-items: center;
+}
+.header-bottom .logo {
+  margin-right: 60.5px;
+  margin-left: 150px;
+  transition: all 0.25s;
+}
+.header-bottom .logo:hover {
+  transform: scale(1.2);
+}
+.header-bottom a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #858484;
+  margin-right: 26px;
+}
+.header-bottom a:hover {
   color: #FE6A84;
+}
+.header-bottom ul li a:active {
+  background-color: rgb(221, 209, 209);
+}
+.header-bottom input {
+  margin-left: 30px;
+  width: 190px;
+  border-radius: 20px;
+  font-family: "Quicksand", sans-serif;
+  color: #858484;
+  font-weight: 550;
+  border: 1px solid #FE6A84;
+  height: 30px;
+  padding-left: 10px;
+}
+.header-bottom .icon_search {
+  z-index: 2;
+  right: 27px;
+  bottom: 2px;
+  position: relative;
+}
+.header-bottom .icon_search:hover {
+  cursor: pointer;
+}
+
+#item_slide {
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 440px;
+  border-radius: 20px;
+  transition: all 1s;
+}
+#item_slide img {
+  margin: 28px 44.77px 24.47px 25.64px;
+}
+#item_slide .text_in_slide {
+  color: white;
+}
+#item_slide .text_in_slide h6 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+#item_slide .text_in_slide h4 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 24px;
+}
+#item_slide .text_in_slide p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+#item_slide .text_in_slide button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 48px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  background-color: white;
+  transition: all 0.3s;
+}
+#item_slide .text_in_slide button:hover {
+  transform: scale(1.2);
+}
+
+.sl1 {
+  background: linear-gradient(0deg, rgba(254, 106, 132, 0.25) -6.93%, #FF4F6E 97.29%);
+}
+.sl1 div button {
+  color: #FE6A84;
+}
+
+.sl2 {
+  background: linear-gradient(4.66deg, rgba(162, 184, 214, 0.25) 3.46%, #A1B8D6 95.96%);
+}
+.sl2 div button {
+  color: #649DE8;
+}
+
+.sl3 {
+  background: linear-gradient(5.89deg, rgba(173, 122, 90, 0.25) 4.98%, #98684B 95.73%);
+}
+.sl3 div button {
+  color: #99694C;
+}
+
+.sl4 {
+  background: linear-gradient(4.66deg, rgba(249, 206, 133, 0.25) 3.32%, #FBCC7A 95.81%);
+}
+.sl4 div button {
+  color: #E7B154;
+}
+
+.sl5 {
+  background: linear-gradient(4.66deg, rgba(205, 146, 170, 0.25) 3.73%, #CC91A9 96.23%);
+}
+.sl5 div button {
+  color: #C88CA4;
+}
+
+.sl6 {
+  background: linear-gradient(3.1deg, rgba(238, 60, 74, 0.25) 2.75%, #EE3C4A 97.6%);
+}
+.sl6 div button {
+  color: #E42D3C;
+}
+
+.sl7 {
+  background: linear-gradient(4.66deg, rgba(84, 161, 82, 0.25) 3.73%, #53A051 96.23%);
+}
+.sl7 div button {
+  color: #298527;
+}
+
+.btn_slider_change {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 1365px;
+  height: 48px;
+  position: relative;
+  bottom: 49px;
+  z-index: 2;
+}
+.btn_slider_change-element {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #858484;
+  margin: 4px;
+  transition: all 0.5s ease-in-out;
+}
+
+.hieu_ung_btn_slide {
+  width: 30px;
   background: white;
+  border-radius: 6px;
+  border: 1px solid #858484;
 }
 
 .modal_info_input {
@@ -195,6 +434,7 @@ input {
   align-items: center;
 }
 .modal_info_input .option1-text .icon-inner, .modal_info_input .option2-text .icon-inner {
+  transition: all 0.15s linear;
   width: 14px;
   height: 14px;
   border-radius: 50%;
@@ -237,23 +477,26 @@ input {
   z-index: 1;
 }
 .modal_info_input button {
+  transition: all 0.2s linear;
   margin-top: 3%;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 92%;
   height: 48px;
-  background: #FE6A84;
-  color: white;
+  border: 2px solid #FE6A84;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   border-radius: 24px;
 }
-.modal_info_input button:hover {
-  color: #FE6A84;
-  background: white;
-  border: 2px solid #FE6A84;
+
+.soluongdon {
+  display: flex;
+  flex-direction: row;
+}
+.soluongdon-number {
+  margin-left: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

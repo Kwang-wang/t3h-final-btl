@@ -1,0 +1,135 @@
+#item_slide{
+    font-family: $main-font;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 440px;
+    border-radius: 20px;
+    transition: all 1s;
+    img{
+       margin: 28px 44.77px 24.47px 25.64px;
+    }
+    .text_in_slide{
+        color: white;
+        h6{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 24px;
+            
+        }
+        h4{
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 24px;
+        }
+        p{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 24px;
+        }
+        button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 170px;
+            height: 48px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 18px;
+            background-color: white;
+            transition: all 0.3s;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+
+    }
+}
+.sl1{
+    background: linear-gradient(0deg, rgba(254, 106, 132, 0.25) -6.93%, #FF4F6E 97.29%);
+    div{
+        button{
+            color: #FE6A84;
+        }
+    }
+}
+.sl2{
+    background: linear-gradient(4.66deg, rgba(162, 184, 214, 0.25) 3.46%, #A1B8D6 95.96%);
+    div{
+        button{
+            color: #649DE8;
+        }
+    }
+}
+.sl3{
+    background: linear-gradient(5.89deg, rgba(173, 122, 90, 0.25) 4.98%, #98684B 95.73%);
+    div{
+        button{
+            color: #99694C;
+        }
+    }
+}
+.sl4{
+    background: linear-gradient(4.66deg, rgba(249, 206, 133, 0.25) 3.32%, #FBCC7A 95.81%);
+    div{
+        button{
+            color: #E7B154;
+        }
+    }
+}
+.sl5{
+    background: linear-gradient(4.66deg, rgba(205, 146, 170, 0.25) 3.73%, #CC91A9 96.23%);
+    div{
+        button{
+            color: #C88CA4;
+        }
+    }
+}
+.sl6{
+    background: linear-gradient(3.1deg, rgba(238, 60, 74, 0.25) 2.75%, #EE3C4A 97.6%);
+    div{
+        button{
+            color: #E42D3C;
+
+        }
+    }
+}
+.sl7{
+    background: linear-gradient(4.66deg, rgba(84, 161, 82, 0.25) 3.73%, #53A051 96.23%);
+    div{
+        button{
+            color: #298527;
+        }
+    }
+}
+.btn_slider_change{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 1365px;
+    height: 48px;
+    position: relative;
+    bottom: 49px;
+    z-index: 2;
+    &-element{
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background: $main-text-color;
+        margin: 4px;
+        transition: all 0.5s ease-in-out;
+
+
+    }
+}
+.hieu_ung_btn_slide{
+    width: 30px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid $main-text-color;
+}

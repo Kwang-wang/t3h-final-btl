@@ -1,15 +1,17 @@
 .header{
     font-family: $main-font;
-    width: 100%;
+    width: 1440px;
     height: 110px;
     &-top{
         display: flex;
         flex-direction: row;
         width: 100%;
-        height: 40px;
+        height: 50px;
         border-bottom: 1px solid $main-color;
+        align-items: center;
         &-left{
-            width: 50%;
+
+            margin-bottom: 11px;
             display: flex;
             flex-direction: row;
             font-weight: 600;
@@ -17,6 +19,7 @@
             line-height: 18px;
             color: $main-text-color;
             margin-left: 11%;
+            margin-right: 20%;
             svg{
                 vertical-align: middle;
                 margin-right: 8px;
@@ -28,6 +31,7 @@
                         }
             }
             a{
+                transition: all 0.2s linear;
                 text-decoration: none;
                 color: $main-text-color;
                 &:hover{
@@ -41,27 +45,129 @@
                 margin-top: 11px;
                 margin-right: 4%;
             }
+            .phone_number{
+                a{
+                    width: 85px;
+                }
+            }
+            .mail{
+                a{
+                    width: 173px;
+                }
+            }
+            .work_time{
+                width: 158px;
+            }
         }
         &-right{
-            width: 50%;
+            margin-left: 100px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
             button{
-                margin-top: 1.5px;
-                margin-left: 20%;
+                transition:all 0.2s linear ;
+                width: 62px;
+                margin-top: 1.2px;
+                margin-bottom: 0.5%;
                 border-radius: 18px;
                 border: 2px solid $main-color;
                 display: flex;
                 align-items: center;
                 height: 16px;
                 padding: 8px 20px;
-                background: $main-color;
-                color: white;
                 font-weight: 600;
                 font-size: 14px;
+                animation: zoom-in-out 2s infinite;
+            }
+            .cart{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 28px;
+                flex-wrap: nowrap;
+                margin-right: 150px;
+                margin-left: 13px;
                 &:hover{
-                    color: $main-color;
-                    background: white;
-                }    
+                    cursor: pointer;
+                }
+
+                div{
+                    right: 15px;
+                    position: relative;
+                    padding: 9px;
+                    border: 1.5px solid #FFFFFF;
+                    border-radius: 50%;
+                    width: 12px;
+                    height: 12px;
+                    background-color: $main-color;
+                    display: flex;
+                    justify-content: center ;
+                    margin-bottom: 15px;
+                    h6{
+                        font-weight: 600;
+                        font-size: 10px;
+                        color: white;
+                        line-height: 0px;
+    
+                    }
+                }
             }
         }
     }
+    &-bottom{
+        width: 1440px;
+        height: 70px;
+        display: flex;
+        outline: none;
+        align-items: center;
+        .logo{
+            margin-right: 60.5px;
+            margin-left: 150px;
+            transition: all 0.25s;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+        a{
+            &:hover{
+                color: $main-color;
+            }
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            color: $main-text-color;
+            margin-right: 26px;
+        }
+        ul{
+            li{
+                a:active{
+                    background-color: rgb(221, 209, 209);
+
+                }
+            }
+        }
+        input{
+            margin-left: 30px;
+            width: 190px;
+            border-radius: 20px;
+            font-family: $main-font;
+            color: $main-text-color;
+            font-weight: 550;
+            border: 1px solid $main-color;
+            height: 30px;
+            padding-left: 10px;
+        }
+        .icon_search{
+            z-index: 2;
+            right: 27px;
+            bottom: 2px;
+            position: relative;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        
+    }
+
 }

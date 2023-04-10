@@ -21,8 +21,27 @@ document.addEventListener('click',function(event){
 })
 
 $(document).ready(function(){
+    
+    $('.soluongdon-number').text($('.cart_stockk').text())
+    $('.ic1').addClass('option_buy')  
     $('.icon-inner').click(function(){
         $('.icon-inner').removeClass('option_buy')
         $(this).addClass('option_buy')
     });
+    $('.btn_type_1').addClass('mouseleave')
+    /*btn loai 1*/
+    $('.btn_type_1').mouseenter(function(){
+        $(this).removeClass('mouseleave')
+        $(this).addClass('hover_button')
+    }).mouseleave(function(){
+        $(this).removeClass('hover_button');
+        $(this).addClass('mouseleave')
+      });
+      /*button_0n_slide */
+    $('.btn_slider_change-element').click(function(){
+        $('.btn_slider_change-element').removeClass('hieu_ung_btn_slide')
+        $(this).addClass('hieu_ung_btn_slide')
+    })
+    
+    
 });
