@@ -38,9 +38,17 @@ $(document).ready(function(){
         $(this).addClass('mouseleave')
       });
       /*button_0n_slide */
+    $('.dot_active').addClass('hieu_ung_btn_slide')
     $('.btn_slider_change-element').click(function(){
         $('.btn_slider_change-element').removeClass('hieu_ung_btn_slide')
         $(this).addClass('hieu_ung_btn_slide')
+    })
+    $('.btn_type_2').addClass('hover_button')
+    $('.btn_active').addClass('mouseleave')
+
+    $('.btn_type_2').click(function(){
+        $(".btn_type_2").removeClass('mouseleave')
+        $(this).addClass('mouseleave')
     })
     
     
