@@ -34,6 +34,12 @@ input{
     background: $main-color;
     color: white;
 }
+.chosen{
+    background-color: #d27e7e;
+}
+.chosen2{
+    background-color: rgb(203, 203, 217);
+}
 @keyframes zoom-in-out {
     0% {
       transform: scale(1);

@@ -88,13 +88,19 @@
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasRightLabel">Giỏ hàng của bạn</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <div class="cart_stock_container">
+                <h4>Tổng số đơn hàng :</h4>
+            <h4 class="soluongdon-number" style="margin-left: 10px;">3</h4>
+            </div>
+            <div class="cart_price_container">
+                <h4>Tổng giá tiền :</h4>
+            <h4 class="total_price" style="margin-left: 10px
+            ;">300.000đ</h4>
+            </div>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" class="btn_type_1">Xác nhận mua hàng</button>
         </div>
         <div class="offcanvas-body">
-            <div class="soluongdon">
-                <h4>Tổng số đơn hàng :</h4>
-                <h4 class="soluongdon-number">3</h4>
-            </div>
+
         </div>
         </div>
         <!--End Off Canvas-->
@@ -305,7 +311,7 @@
                                 <h4 class="cr-price">25,000đ</h4>
                                 <h4 class="sale-price">30,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                         <div class="product-list-element">
                             <img src="img/cake_choice2.jpg" alt="">
@@ -313,7 +319,7 @@
                             <div>
                                 <h4 class="cr-price">35,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                         <div class="product-list-element">
                             <img src="img/cake_choice3.jpg" alt="">
@@ -321,7 +327,7 @@
                             <div>
                                 <h4 class="cr-price">30,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                         <div class="product-list-element">
                             <img src="img/cake_choice4.jpg" alt="">
@@ -329,7 +335,7 @@
                             <div>
                                 <h4 class="cr-price">20,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                         <div class="product-list-element">
                             <img src="img/cake_choice5.jpg" alt="">
@@ -337,7 +343,7 @@
                             <div>
                                 <h4 class="cr-price">30,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                         <div class="product-list-element">
                             <img src="img/cake_choice6.jpg" alt="">
@@ -345,7 +351,7 @@
                             <div>
                                 <h4 class="cr-price">35,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                         <div class="product-list-element">
                             <img src="img/cake_choice7.jpg" alt="">
@@ -353,7 +359,7 @@
                             <div>
                                 <h4 class="cr-price">25,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                         <div class="product-list-element">
                             <img src="img/cake_choice8.jpg" alt="">
@@ -361,7 +367,7 @@
                             <div>
                                 <h4 class="cr-price">30,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                     </div>
                   </div>
@@ -373,7 +379,7 @@
                             <div>
                                 <h4 class="cr-price">220,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                         <div class="product-list-element">
                             <img src="img/gato2.jpg" alt="">
@@ -381,7 +387,7 @@
                             <div>
                                 <h4 class="cr-price">240,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                         <div class="product-list-element">
                             <img src="img/gato3.jpg" alt="">
@@ -389,7 +395,7 @@
                             <div>
                                 <h4 class="cr-price">200,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                         <div class="product-list-element">
                             <img src="img/gato4.jpg" alt="">
@@ -397,7 +403,7 @@
                             <div>
                                 <h4 class="cr-price">200,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                         <div class="product-list-element">
                             <img src="img/gato5.jpg" alt="">
@@ -405,7 +411,7 @@
                             <div>
                                 <h4 class="cr-price">100,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                         <div class="product-list-element">
                             <img src="img/gato6.jpg" alt="">
@@ -413,7 +419,7 @@
                             <div>
                                 <h4 class="cr-price">220,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                         <div class="product-list-element">
                             <img src="img/gato7.jpg" alt="">
@@ -421,7 +427,7 @@
                             <div>
                                 <h4 class="cr-price">600,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                         <div class="product-list-element">
                             <img src="img/gato8.jpg" alt="">
@@ -429,7 +435,7 @@
                             <div>
                                 <h4 class="cr-price">80,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                     </div>
                   </div>
@@ -441,7 +447,7 @@
                             <div>
                                 <h4 class="cr-price">5,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                         <div class="product-list-element">
                             <img src="img/banhmi2.jpg" alt="">
@@ -449,7 +455,7 @@
                             <div>
                                 <h4 class="cr-price">25,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                         <div class="product-list-element">
                             <img src="img/banhmi3.jpg" alt="">
@@ -457,7 +463,7 @@
                             <div>
                                 <h4 class="cr-price">25,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                         <div class="product-list-element">
                             <img src="img/banhmi4.jpg" alt="">
@@ -465,7 +471,7 @@
                             <div>
                                 <h4 class="cr-price">15,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                         <div class="product-list-element">
                             <img src="img/banhmi5.jpg" alt="">
@@ -473,7 +479,7 @@
                             <div>
                                 <h4 class="cr-price">15,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                         <div class="product-list-element">
                             <img src="img/banhmi6.jpg" alt="">
@@ -481,7 +487,7 @@
                             <div>
                                 <h4 class="cr-price">15,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                         <div class="product-list-element">
                             <img src="img/banhmi7.jpg" alt="">
@@ -489,7 +495,7 @@
                             <div>
                                 <h4 class="cr-price">20,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                         <div class="product-list-element">
                             <img src="img/banhmi8.jpg" alt="">
@@ -497,7 +503,7 @@
                             <div>
                                 <h4 class="cr-price">15,000đ</h4>
                             </div>
-                            <button class="btn_type_1">Thêm vào giỏ hàng</button>
+                            <button class="btn_type_1 add_to_cart">Thêm vào giỏ hàng</button>
                         </div>
                     </div>
                   </div>

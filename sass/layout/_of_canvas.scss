@@ -1,0 +1,105 @@
+.offcanvas-header{
+    font-family: $main-font;
+    display: flex;
+    flex-direction: column;
+    .cart_price_container,.cart_stock_container{
+        display: flex;
+    }
+    h4{
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: $main-text-color;
+    }
+    border-bottom: 1px solid $main-color;
+    button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 180px;
+        height: 30px;
+        border: 2px solid$main-color;
+        transition: all 0.25s;
+        border-radius: 20px;
+    }
+}
+
+.offcanvas-title{
+    font-weight: 700;
+font-size: 30px;
+line-height: 48px;
+color: $main-color;
+}
+.offcanvas-body{
+    display: flex;
+    flex-direction: column;
+}
+.danhmucocv{
+    border-radius: 5px;
+    font-family: $main-font;
+    display: grid;
+    grid-template-columns: 3fr 3fr 1fr;
+    grid-auto-rows: minmax(40px,auto);
+    border: 2px solid $main-color;
+    margin-bottom: 10px;
+    transition: all 0.25s;
+    .name_ocv{
+        margin-left: 10px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        color: #5A5A5A;
+    }
+    .price_ocv{
+        margin-left: 10px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        color: #FE6A84;
+    }
+    .btn_confirm_a{
+        width: 20px;
+        height: 20px;
+        border: 2px solid $main-color;
+        margin-top: 5px;
+        border-radius: 50%;
+        transition: all 0.25s;
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }
+    
+    .img_ocv{
+        margin-left: 10px;
+        img{
+            border-radius: 20px;
+            width: 156px;
+            height: 157px;
+            border: 2px solid $main-color;
+            transition: all 0.25s;
+            &:hover:active{
+                transform: scale(1.2);
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+            }
+            margin-bottom: 20px;
+
+            
+        }
+        
+    }
+    .btn_delete{
+        background-color: #FE6A84;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+        color: white;
+        width: 102px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        margin-left: 10px;
+    }
+}
