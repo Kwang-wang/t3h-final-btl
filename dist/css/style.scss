@@ -113,6 +113,10 @@ input {
 }
 .header-top {
   background-color: white;
+  position: relative;
+  position: fixed;
+  top: 0px;
+  z-index: 100;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -224,6 +228,7 @@ input {
   line-height: 0px;
 }
 .header-bottom {
+  margin-top: 50px;
   width: 1440px;
   height: 70px;
   display: flex;
@@ -682,15 +687,6 @@ input {
   color: white;
   background-color: #FE6A84;
 }
-.product-list-element .thongbao {
-  position: fixed;
-  bottom: -29px;
-  left: 26px;
-  display: none;
-  color: #FE6A84;
-  margin: 0px;
-  font-weight: 600;
-}
 
 .soluongdon {
   display: flex;
@@ -768,6 +764,7 @@ input {
   border: 2px solid #FE6A84;
   margin-top: 5px;
   border-radius: 50%;
+  transition: all 0.25s;
 }
 .danhmucocv .btn_confirm_a:hover {
   cursor: pointer;
@@ -803,4 +800,4 @@ input {
   margin-left: 10px;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.scss.map */

@@ -55,7 +55,8 @@
                 z-index: 10;
                 position: relative;
                 box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /* Thêm box-shadow khi hover */
-              }
+            }
+            
             width: 258px;
             height: 409.02px;   
             display: flex;
@@ -127,6 +128,16 @@
                     
                 }
             }
+            .thongbao {
+                position: fixed;
+                bottom: -29px;
+                left: 26px;
+                display: none;
+                color: $main-color;
+                margin: 0px;
+                font-weight: 600;
+            }
+            
         }
         
     }

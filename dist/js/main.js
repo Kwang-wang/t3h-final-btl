@@ -27,15 +27,21 @@ document.addEventListener('click',function(event){
     }
 })
 function xuligiasanpham(giasp){
-    var price = parseInt(giasp.replace(/,/g, ""));
+    var price = parseInt(giasp.replace(/[,\.]/g, ""));
     var priceFormatted = price.toLocaleString("vi-VN");
     return priceFormatted;
+
+}
+function xuligiasanpham2(giasp){
+    var price = parseInt(giasp.replace(/[,\.]/g, ""));
+    return price;
 
 }
 
 $(document).ready(function(){
     
-    $('.soluongdon-number').text($('.cart_stockk').text())
+    
+    
     $('.ic1').addClass('option_buy')  
     $('.icon-inner').click(function(){
         $('.icon-inner').removeClass('option_buy')
@@ -68,7 +74,10 @@ $(document).ready(function(){
     
 
     $('.add_to_cart').click(function()
-    {   var container = $(this).closest(".product-list-element");
+    {
+        $(this).closest('.product-list-element').find('.thongbao').text('Đã thêm vào giỏ hàng!').fadeIn('slow').delay(10).fadeOut('slow');
+        $('.cart_stockk').text(parseInt($('.cart_stockk').text())+1)
+        var container = $(this).closest(".product-list-element");
         var price_div = container.find('div');
         var name_sp = container.find('h3').text();
         var price_sp = price_div.find('.cr-price').text();
@@ -82,13 +91,50 @@ $(document).ready(function(){
         $('.offcanvas-body').append(danhmuc_ocv)
         danhmuc_ocv.append(img_danhmuc_ocv)
         danhmuc_ocv.append('<button class = "btn_delete">Xóa</button>')
-        
 
     })
     
     
 });
+var soluongdon = $('.soluongdon-number').text();
+var sl = xuligiasanpham2(soluongdon)
+var price_confirm = xuligiasanpham2($('.total_price').text())
+console.log(price_confirm);
 $(document).on('click', '.btn_confirm_a', function() {
-    $(this).toggleClass('chosen');
+    $(this).toggleClass('chosen')
     $(this).closest('.danhmucocv').toggleClass('chosen2')
+    var pri = xuligiasanpham2($(this).closest('.danhmucocv').find('.price_ocv').text())
+    var confirm_action = $(this).closest('.danhmucocv').find('.btn_confirm_a').css('background-color');
+    if(confirm_action == 'rgb(210, 126, 126)')
+    {
+        sl = sl+1;
+        price_confirm = price_confirm + pri;
+        var priceFormatteda = price_confirm.toLocaleString("vi-VN");
+        $('.total_price').text(priceFormatteda + 'đ')
+        $('.soluongdon-number').text(sl);
+    }
+    else{
+        sl = sl-1;
+        $('.soluongdon-number').text(sl);
+        price_confirm = price_confirm - pri;
+        var priceFormatteda = price_confirm.toLocaleString("vi-VN");
+        $('.total_price').text(priceFormatteda + 'đ')
+    }
+    
+
+    
   });
+  $(document).on('click','.btn_delete', function(){
+    $('.cart_stockk').text(parseInt($('.cart_stockk').text())-1)
+    var pri = xuligiasanpham2($(this).closest('.danhmucocv').find('.price_ocv').text())
+    price_confirm = price_confirm - pri;
+    var priceFormatteda = price_confirm.toLocaleString("vi-VN");
+    $('.total_price').text(priceFormatteda + 'đ')
+    sl = sl-1;
+    $('.soluongdon-number').text(sl);
+})
+
+
+
+
+

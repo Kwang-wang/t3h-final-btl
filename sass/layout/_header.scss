@@ -3,6 +3,7 @@
     width: 1440px;
     height: 110px;
     &-top{
+        background-color: white;
         display: flex;
         flex-direction: row;
         width: 100%;
@@ -20,15 +21,25 @@
             color: $main-text-color;
             margin-left: 11%;
             margin-right: 20%;
+            div{
+                transition: all 0.25s;
+                &:hover{
+                    transform: scale(1.1);
+                    svg{
+                    
+                    transform: rotate(720deg);
+                    cursor: pointer;
+                        
+                    }
+                }
+                
+            }
             svg{
                 vertical-align: middle;
                 margin-right: 8px;
                 margin-top: 2px;
                 transition: all .5s;
-                        &:hover {
-                            transform: rotate(720deg);
-                            cursor: pointer;
-                        }
+                        
             }
             a{
                 transition: all 0.2s linear;
