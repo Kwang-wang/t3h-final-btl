@@ -125,13 +125,18 @@ $(document).on('click', '.btn_confirm_a', function() {
     
   });
   $(document).on('click','.btn_delete', function(){
+    var confirm_action = $(this).closest('.danhmucocv').find('.btn_confirm_a').css('background-color');
     $('.cart_stockk').text(parseInt($('.cart_stockk').text())-1)
-    var pri = xuligiasanpham2($(this).closest('.danhmucocv').find('.price_ocv').text())
+    if(confirm_action =='rgb(210, 126, 126)' )
+    {
+        var pri = xuligiasanpham2($(this).closest('.danhmucocv').find('.price_ocv').text())
     price_confirm = price_confirm - pri;
     var priceFormatteda = price_confirm.toLocaleString("vi-VN");
     $('.total_price').text(priceFormatteda + 'đ')
     sl = sl-1;
     $('.soluongdon-number').text(sl);
+    }
+    
 })
 
 
