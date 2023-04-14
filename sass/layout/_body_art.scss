@@ -1,0 +1,138 @@
+.bodyart_title{
+    position: relative;
+    bottom: -47px;
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    color: $main-color;
+    margin-top: 165px;
+}
+.body_art{
+    transform: scale(0.9);
+    font-family: $main-font;
+    width: 100%;
+    height: 676px;
+    display: grid;
+    grid-auto-rows:minmax(auto,263px) ;
+    grid-template-areas: 
+    "ele1 ele1 ele1 ele2 ele2 ele2"
+    "ele3 ele3 logo logo ele4 ele4"
+    "ele5 ele5 ele5 ele6 ele6 ele6";
+    &:hover{
+        #bd1,#bd3,#bd5{
+            transform: translateX(90px);
+        }
+        #bd2,#bd4,#bd6{
+            transform: translateX(-90px);
+        }
+
+    }
+    &-element{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: #5A5A5A;
+        transition: all 0.5s;
+        &:hover{
+            transform: scale(1.2);
+        }
+
+    }
+    #bd1{
+        grid-area: ele1;
+        position: relative;
+        bottom: -72px;
+    }
+    #bd2{
+        grid-area: ele2;
+        position: relative;
+        bottom: -72px;
+        right: -10px;
+    }
+    #bd3{
+        
+        grid-area: ele3;
+    }
+    #bd4{
+        grid-area: ele4;
+        
+    }
+    #bd5{
+        grid-area: ele5;
+        position: relative;
+        top: -60px;
+    }
+    #bd6{
+        grid-area: ele6;
+        position: relative;
+        top: -60px;
+    }
+    #bd7{
+        height: 360px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: logo;
+    }
+
+}
+.body_nonename{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: $main-font;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    #kkk{
+        width: 263px;
+        height: 263px;
+        margin-left: 30px;
+        
+        margin-top: 55px;
+    }
+
+
+    div{
+        margin-left: 30px;
+        width: 440px;
+        height: 358px;
+        display: flex;
+        flex-direction: column;
+        h3{
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 48px;
+            color: $main-color;
+        }
+        button{
+            width: 201px;
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            border: 2px solid $main-color;
+            border-radius: 24px;
+            transition: all 0.25s;
+        }
+        p{
+            margin-top: 16px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: $main-text-color;
+        }
+    }
+}

@@ -1,0 +1,89 @@
+.feedback-title{
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: $main-color;
+    font-family: $main-font;
+    margin-top: 120px;
+    margin-bottom: 32px;
+}
+.owl-carousel{
+    width: 1142px;
+    margin-left: 115px;
+    margin-right: 150px;
+    
+    .item{
+        font-family: $main-font;
+        width: 263px;
+        height: 285px;
+        border: 2px solid $main-color;
+        margin-right: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        img{
+            width: 120px;
+            height: 120px;
+            margin-top: 10px;
+        }
+        h6{
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 28px;
+            color: #5A5A5A;
+            margin-top: 7.51px;
+        }
+        div{
+            p{
+                text-align: center;
+                color: #858484;
+                font-weight: 400;
+                font-size: 16px;
+            }
+            width: 236px;
+            height: 96px;
+            margin-top: 4px;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow: hidden;
+        }
+    }
+}
+.owl-prev{
+    margin: 0px;
+    position: relative;
+    left: -612px;
+    bottom: 176px;
+    transform: scale(5);
+    display: flex;
+    align-items: center;
+    span{
+        position: relative;
+        bottom: 1.5px;
+        color: $main-color;
+    }
+   
+    border-radius: 0px;
+    width: 10px;
+    
+}
+.owl-next{
+    margin: 0px;
+    position: relative;
+    right: -612px;
+    bottom: 176px;
+    transform: scale(5);
+    display: flex;
+    align-items: center;
+    span{
+        position: relative;
+        bottom: 1.5px;
+        color: $main-color;
+    }
+    width: 10px;
+}
+.owl-dots{
+    display: none;
+}

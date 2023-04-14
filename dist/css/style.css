@@ -692,6 +692,225 @@ input {
   font-weight: 600;
 }
 
+.bodyart_title {
+  position: relative;
+  bottom: -47px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  color: #FE6A84;
+  margin-top: 165px;
+}
+
+.body_art {
+  transform: scale(0.9);
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
+  height: 676px;
+  display: grid;
+  grid-auto-rows: minmax(auto, 263px);
+  grid-template-areas: "ele1 ele1 ele1 ele2 ele2 ele2" "ele3 ele3 logo logo ele4 ele4" "ele5 ele5 ele5 ele6 ele6 ele6";
+}
+.body_art:hover #bd1, .body_art:hover #bd3, .body_art:hover #bd5 {
+  transform: translateX(90px);
+}
+.body_art:hover #bd2, .body_art:hover #bd4, .body_art:hover #bd6 {
+  transform: translateX(-90px);
+}
+.body_art-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #5A5A5A;
+  transition: all 0.5s;
+}
+.body_art-element:hover {
+  transform: scale(1.2);
+}
+.body_art #bd1 {
+  grid-area: ele1;
+  position: relative;
+  bottom: -72px;
+}
+.body_art #bd2 {
+  grid-area: ele2;
+  position: relative;
+  bottom: -72px;
+  right: -10px;
+}
+.body_art #bd3 {
+  grid-area: ele3;
+}
+.body_art #bd4 {
+  grid-area: ele4;
+}
+.body_art #bd5 {
+  grid-area: ele5;
+  position: relative;
+  top: -60px;
+}
+.body_art #bd6 {
+  grid-area: ele6;
+  position: relative;
+  top: -60px;
+}
+.body_art #bd7 {
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: logo;
+}
+
+.body_nonename {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.body_nonename #kkk {
+  width: 263px;
+  height: 263px;
+  margin-left: 30px;
+  margin-top: 55px;
+}
+.body_nonename div {
+  margin-left: 30px;
+  width: 440px;
+  height: 358px;
+  display: flex;
+  flex-direction: column;
+}
+.body_nonename div h3 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #FE6A84;
+}
+.body_nonename div button {
+  width: 201px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  border: 2px solid #FE6A84;
+  border-radius: 24px;
+  transition: all 0.25s;
+}
+.body_nonename div p {
+  margin-top: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #858484;
+}
+
+.feedback-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #FE6A84;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 120px;
+  margin-bottom: 32px;
+}
+
+.owl-carousel {
+  width: 1142px;
+  margin-left: 115px;
+  margin-right: 150px;
+}
+.owl-carousel .item {
+  font-family: "Quicksand", sans-serif;
+  width: 263px;
+  height: 285px;
+  border: 2px solid #FE6A84;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
+.owl-carousel .item img {
+  width: 120px;
+  height: 120px;
+  margin-top: 10px;
+}
+.owl-carousel .item h6 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #5A5A5A;
+  margin-top: 7.51px;
+}
+.owl-carousel .item div {
+  width: 236px;
+  height: 96px;
+  margin-top: 4px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+.owl-carousel .item div p {
+  text-align: center;
+  color: #858484;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.owl-prev {
+  margin: 0px;
+  position: relative;
+  left: -612px;
+  bottom: 176px;
+  transform: scale(5);
+  display: flex;
+  align-items: center;
+  border-radius: 0px;
+  width: 10px;
+}
+.owl-prev span {
+  position: relative;
+  bottom: 1.5px;
+  color: #FE6A84;
+}
+
+.owl-next {
+  margin: 0px;
+  position: relative;
+  right: -612px;
+  bottom: 176px;
+  transform: scale(5);
+  display: flex;
+  align-items: center;
+  width: 10px;
+}
+.owl-next span {
+  position: relative;
+  bottom: 1.5px;
+  color: #FE6A84;
+}
+
+.owl-dots {
+  display: none;
+}
+
 .soluongdon {
   display: flex;
   flex-direction: row;
