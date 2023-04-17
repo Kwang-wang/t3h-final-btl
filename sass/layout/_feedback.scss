@@ -1,4 +1,6 @@
 .feedback-title{
+    position: relative;
+    bottom: 150px;
     text-align: center;
     font-weight: 700;
     font-size: 40px;
@@ -9,6 +11,8 @@
     margin-bottom: 32px;
 }
 .owl-carousel{
+    position: relative;
+    bottom: 150px;
     width: 1142px;
     margin-left: 115px;
     margin-right: 150px;

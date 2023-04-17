@@ -91,16 +91,51 @@
     justify-content: center;
     font-family: $main-font;
     display: flex;
+    height: 624px;
     flex-direction: row;
     flex-wrap: wrap;
-    #kkk{
+    .img1{
+
+        #im2{
+            width: 440px;
+            height: 459px;
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        img{
+            border-radius: 30px;
+        }
+        &:hover{
+            #im2{
+                opacity: 1;
+
+            }
+        }
+    }
+    .img2{
+        margin-top: 80px;
+        margin-left: 30px;
+        display: flex;
+        flex-wrap: nowrap;
         width: 263px;
         height: 263px;
-        margin-left: 30px;
-        
-        margin-top: 55px;
-    }
+        img{
+            width: 263px;
+            height: 263px;
+            border-radius: 30px;
+        }
+        #kkk2{
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        &:hover{
+            #kkk2{
+                opacity: 1;
+            }
 
+        }
+        
+    }
 
     div{
         margin-left: 30px;
