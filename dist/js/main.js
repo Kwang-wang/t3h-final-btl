@@ -3,7 +3,7 @@ var text_space =document.querySelectorAll("#text_a");
 document.addEventListener('click', function(event) {
     if (event.target.classList.contains('btn_delete')) {
       var parent = event.target.closest('.danhmucocv');
-      parent.style.display = 'none';
+      parent.remove();
     }
   });
   
@@ -41,7 +41,6 @@ function xuligiasanpham2(giasp){
 $(document).ready(function(){
     
     
-    
     $('.ic1').addClass('option_buy')  
     $('.icon-inner').click(function(){
         $('.icon-inner').removeClass('option_buy')
@@ -72,51 +71,112 @@ $(document).ready(function(){
     
 
     
-
-    $('.add_to_cart').click(function()
-    {
-        $(this).closest('.product-list-element').find('.thongbao').text('Đã thêm vào giỏ hàng!').fadeIn('slow').delay(10).fadeOut('slow');
-        $('.cart_stockk').text(parseInt($('.cart_stockk').text())+1)
-        var container = $(this).closest(".product-list-element");
-        var price_div = container.find('div');
-        var name_sp = container.find('h3').text();
-        var price_sp = price_div.find('.cr-price').text();
-        var price_sp_solved = xuligiasanpham(price_sp)
-        var imgSrc = container.find('img').attr('src');
-       
-        var danhmuc_ocv =  $('<div/>', { class: 'danhmucocv', html :'<div class = "name_ocv">'+name_sp+'</div><div class = "price_ocv">' + price_sp_solved +"đ"+ '</div>' });
-        var img_danhmuc_ocv = $('<div/>',{class : 'img_ocv',html : '<img src='+'"'+ imgSrc +'"'+ '</img> '})
-        var btn_confirm = $('<div/>',{class : 'btn_confirm_a'})
-        danhmuc_ocv.append(btn_confirm)
-        $('.offcanvas-body').append(danhmuc_ocv)
-        danhmuc_ocv.append(img_danhmuc_ocv)
-        danhmuc_ocv.append('<button class = "btn_delete">Xóa</button>')
-
-    })
+    
     
     
 });
-var soluongdon = $('.soluongdon-number').text();
-var sl = xuligiasanpham2(soluongdon)
-var price_confirm = xuligiasanpham2($('.total_price').text())
+
+        
+$('.add_to_cart').click(function()
+    {
+        var container = $(this).closest(".product-list-element");
+        var name_sp = container.find('h3').text();
+        var checksp  = $('.name_ocv').text()
+        if (checksp.includes(name_sp)==false)
+        {
+            $(this).closest('.product-list-element').find('.thongbao').text('Đã thêm vào giỏ hàng!').fadeIn('slow').delay(10).fadeOut('slow');
+            $('.cart_stockk').text(parseInt($('.cart_stockk').text())+1)
+            
+            var price_div = container.find('div');
+            var price_sp = price_div.find('.cr-price').text();
+            var price_sp_solved = xuligiasanpham(price_sp)
+            var imgSrc = container.find('img').attr('src');
+               
+            var danhmuc_ocv =  $('<div/>', { class: 'danhmucocv', html :'<div class = "name_ocv">'+name_sp+'</div><div class = "price_ocv">' + price_sp_solved +"đ"+ '</div>' });
+            var img_danhmuc_ocv = $('<div/>',{class : 'img_ocv',html : '<img src='+'"'+ imgSrc +'"'+ '</img> '})
+            var btn_confirm = $('<div/>',{class : 'btn_confirm_a'})
+            var adjust_stock = $('<div>',{class: 'adjust_stock',html : '<h6>Số lượng</h6><button class = "cong">+</button><h5>1</h5><button class = "tru">-</button>'})
+            danhmuc_ocv.append(btn_confirm)
+            $('.offcanvas-body').append(danhmuc_ocv)
+            danhmuc_ocv.append(img_danhmuc_ocv)
+            danhmuc_ocv.append(adjust_stock)
+            danhmuc_ocv.append('<button class = "btn_delete">Xóa</button>')
+
+        }
+        else{
+            $(this).closest('.product-list-element').find('.thongbao').text('Đơn hàng đã có trong giỏ hàng!').fadeIn('slow').delay(10).fadeOut('slow');
+        }
+
+        
+       
+
+    })
+    var soluongdon = $('.soluongdon-number').text();
+    var sl = xuligiasanpham2(soluongdon)
+    var price_confirm = xuligiasanpham2($('.total_price').text())
+
+$(document).on('click','.cong',function(){
+    var check = $(this).closest('.adjust_stock').siblings('.btn_confirm_a')
+    var pri = xuligiasanpham2($(this).closest('.adjust_stock').siblings('.price_ocv').text())
+    var container2  = $(this).closest('.adjust_stock');
+    var dem = parseInt(container2.find('h5').text())
+    dem = dem +1;
+    container2.find('h5').text(dem)
+    if(check.hasClass('chosen'))
+    {
+        sl = sl+1;
+        $('.soluongdon-number').text(sl);
+        price_confirm = price_confirm + pri;
+        var priceFormatteda = price_confirm.toLocaleString("vi-VN");
+        $('.total_price').text(priceFormatteda + 'đ')
+        
+
+    }
+    
+})
+$(document).on('click','.tru',function(){
+    var check = $(this).closest('.adjust_stock').siblings('.btn_confirm_a')
+    var pri = xuligiasanpham2($(this).closest('.adjust_stock').siblings('.price_ocv').text())
+    var container2  = $(this).closest('.adjust_stock');
+    var dem = parseInt(container2.find('h5').text())
+    if(check.hasClass('chosen')&& dem!=1)
+    {
+        sl = sl-1;
+        $('.soluongdon-number').text(sl);
+        price_confirm = price_confirm - pri;
+        var priceFormatteda = price_confirm.toLocaleString("vi-VN");
+        $('.total_price').text(priceFormatteda + 'đ')
+        
+        
+    }
+    if(dem>1)
+    {
+        dem = dem -1;
+    }
+    container2.find('h5').text(dem)
+    
+})
+
 console.log(price_confirm);
 $(document).on('click', '.btn_confirm_a', function() {
     $(this).toggleClass('chosen')
     $(this).closest('.danhmucocv').toggleClass('chosen2')
     var pri = xuligiasanpham2($(this).closest('.danhmucocv').find('.price_ocv').text())
-    var confirm_action = $(this).closest('.danhmucocv').find('.btn_confirm_a').css('background-color');
-    if(confirm_action == 'rgb(210, 126, 126)')
+    var confirm_action = $(this).closest('.danhmucocv').find('.btn_confirm_a');
+    var container3 = $(this).siblings('.adjust_stock')
+    var soluong =parseInt(container3.find('h5').text())
+    if(confirm_action.hasClass('chosen'))
     {
-        sl = sl+1;
-        price_confirm = price_confirm + pri;
+        sl = sl+soluong;
+        price_confirm = price_confirm + pri*soluong;
         var priceFormatteda = price_confirm.toLocaleString("vi-VN");
         $('.total_price').text(priceFormatteda + 'đ')
         $('.soluongdon-number').text(sl);
     }
     else{
-        sl = sl-1;
+        sl = sl-soluong;
         $('.soluongdon-number').text(sl);
-        price_confirm = price_confirm - pri;
+        price_confirm = price_confirm - pri*soluong;
         var priceFormatteda = price_confirm.toLocaleString("vi-VN");
         $('.total_price').text(priceFormatteda + 'đ')
     }
@@ -124,18 +184,20 @@ $(document).on('click', '.btn_confirm_a', function() {
 
     
   });
-  $(document).on('click','.btn_delete', function(){
-    var confirm_action = $(this).closest('.danhmucocv').find('.btn_confirm_a').css('background-color');
+$(document).on('click','.btn_delete', function(){
+    var container3 = $(this).siblings('.adjust_stock')
+    var soluong =parseInt(container3.find('h5').text())
+    var confirm_action2 = $(this).closest('.danhmucocv').find('.btn_confirm_a');
     $('.cart_stockk').text(parseInt($('.cart_stockk').text())-1)
-    if(confirm_action =='rgb(210, 126, 126)' )
-    {
-        var pri = xuligiasanpham2($(this).closest('.danhmucocv').find('.price_ocv').text())
-    price_confirm = price_confirm - pri;
-    var priceFormatteda = price_confirm.toLocaleString("vi-VN");
-    $('.total_price').text(priceFormatteda + 'đ')
-    sl = sl-1;
-    $('.soluongdon-number').text(sl);
-    }
+    if(confirm_action2.hasClass('chosen'))
+        {
+            var pri = xuligiasanpham2($(this).closest('.danhmucocv').find('.price_ocv').text())
+            price_confirm = price_confirm - pri*soluong;
+            var priceFormatteda = price_confirm.toLocaleString("vi-VN");
+            $('.total_price').text(priceFormatteda + 'đ')
+            sl = sl-soluong;
+            $('.soluongdon-number').text(sl);
+        }
     
 })
 $(document).ready(function(){

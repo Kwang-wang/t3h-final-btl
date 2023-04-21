@@ -35,6 +35,7 @@ color: $main-color;
     flex-direction: column;
 }
 .danhmucocv{
+    width: 347px;
     border-radius: 5px;
     font-family: $main-font;
     display: grid;
@@ -88,6 +89,9 @@ color: $main-color;
         
     }
     .btn_delete{
+        position: relative;
+        bottom: -122px ;
+        right: 90px;
         background-color: #FE6A84;
         font-weight: 600;
         font-size: 14px;
@@ -100,5 +104,38 @@ color: $main-color;
         align-items: center;
         border-radius: 20px;
         margin-left: 10px;
+    }
+    .adjust_stock{
+        height: 40px;
+
+        top: 29px;
+        position: relative;
+        left: 20px;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        width: 150px;
+        h6,h5{
+            font-family: $main-font;
+            font-weight: 700;
+            color: $main-text-color;
+        }
+        h5{
+            vertical-align: middle;
+            margin: 10px;
+        }
+        
+        button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $main-color;
+            width: 30px;
+            height: 30px;
+            border-radius: 20%;
+            color: white;
+            font-weight: 700;
+        }
+
     }
 }

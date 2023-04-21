@@ -18,6 +18,9 @@
     margin-right: 150px;
     
     .item{
+        &:hover{
+            box-shadow: 0 30px 30px #edb9c3;
+        }
         font-family: $main-font;
         width: 263px;
         height: 285px;

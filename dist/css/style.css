@@ -236,7 +236,7 @@ input {
   transition: all 0.25s;
 }
 .header-bottom .logo:hover {
-  transform: scale(1.2);
+  cursor: pointer;
 }
 .header-bottom a {
   text-decoration: none;
@@ -397,7 +397,6 @@ input {
   width: 30px;
   background: white;
   border-radius: 6px;
-  border: 1px solid #858484;
 }
 
 .modal_info_input {
@@ -598,7 +597,7 @@ input {
   padding-left: 10px;
   padding-right: 15px;
   width: 1142px;
-  height: 1000.03px;
+  height: 911.03px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -616,10 +615,10 @@ input {
 }
 .product-list-element:hover {
   cursor: pointer;
-  transform: scale(1.05);
+  transform: scale(1.01);
   z-index: 10;
   position: relative;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /* Thêm box-shadow khi hover */
+  box-shadow: 0 0px 30px #f598a9; /* Thêm box-shadow khi hover */
 }
 .product-list-element h3 {
   font-weight: 600;
@@ -878,6 +877,9 @@ input {
   align-items: center;
   border-radius: 20px;
 }
+.owl-carousel .item:hover {
+  box-shadow: 0 30px 30px #edb9c3;
+}
 .owl-carousel .item img {
   width: 120px;
   height: 120px;
@@ -1099,6 +1101,7 @@ input {
 }
 
 .danhmucocv {
+  width: 347px;
   border-radius: 5px;
   font-family: "Quicksand", sans-serif;
   display: grid;
@@ -1149,6 +1152,9 @@ input {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .danhmucocv .btn_delete {
+  position: relative;
+  bottom: -122px;
+  right: 90px;
   background-color: #FE6A84;
   font-weight: 600;
   font-size: 14px;
@@ -1161,6 +1167,36 @@ input {
   align-items: center;
   border-radius: 20px;
   margin-left: 10px;
+}
+.danhmucocv .adjust_stock {
+  height: 40px;
+  top: 29px;
+  position: relative;
+  left: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 150px;
+}
+.danhmucocv .adjust_stock h6, .danhmucocv .adjust_stock h5 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  color: #858484;
+}
+.danhmucocv .adjust_stock h5 {
+  vertical-align: middle;
+  margin: 10px;
+}
+.danhmucocv .adjust_stock button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FE6A84;
+  width: 30px;
+  height: 30px;
+  border-radius: 20%;
+  color: white;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
