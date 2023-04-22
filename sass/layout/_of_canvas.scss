@@ -59,6 +59,10 @@ color: $main-color;
         color: #FE6A84;
     }
     .btn_confirm_a{
+        display: flex;
+        justify-content: center;
+        transition: all 0.25s;
+        align-items: center;
         width: 20px;
         height: 20px;
         border: 2px solid $main-color;
@@ -104,6 +108,12 @@ color: $main-color;
         align-items: center;
         border-radius: 20px;
         margin-left: 10px;
+        transition: all 0.15s;
+        &:hover{
+            border: 2px solid $main-color;
+            background-color: white;
+            color: $main-color;
+        }
     }
     .adjust_stock{
         height: 40px;
@@ -126,6 +136,15 @@ color: $main-color;
         }
         
         button{
+            transition: all 0.15s;
+            &:hover{
+                border: 2px solid $main-color;
+                background-color: white;
+                color: $main-color;
+                &:active{
+                    transform: scale(1.01);
+                }
+            }
             display: flex;
             justify-content: center;
             align-items: center;
@@ -139,3 +158,4 @@ color: $main-color;
 
     }
 }
+

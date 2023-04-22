@@ -35,10 +35,21 @@ input{
     color: white;
 }
 .chosen{
-    background-color: #d27e7e;
+    &::before{
+        content: "";
+        background-color: $main-color;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        position: relative;
+        transition: all 0.25s;
+        animation: fadeIn 0.25s ease-in-out forwards;
+    }
+    background-color: white;
 }
 .chosen2{
-    background-color: rgb(203, 203, 217);
+    background: linear-gradient(-45deg, #ffffff, #cce668, #ffffff, #dff232);
+    animation: gradient 15s ease infinite;
 }
 @keyframes zoom-in-out {
     0% {
@@ -51,3 +62,23 @@ input{
       transform: scale(1);
     }
   }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  

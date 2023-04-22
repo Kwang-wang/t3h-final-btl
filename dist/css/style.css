@@ -60,11 +60,22 @@ input {
 }
 
 .chosen {
-  background-color: #d27e7e;
+  background-color: white;
+}
+.chosen::before {
+  content: "";
+  background-color: #FE6A84;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  position: relative;
+  transition: all 0.25s;
+  animation: fadeIn 0.25s ease-in-out forwards;
 }
 
 .chosen2 {
-  background-color: rgb(203, 203, 217);
+  background: linear-gradient(-45deg, #ffffff, #cce668, #ffffff, #dff232);
+  animation: gradient 15s ease infinite;
 }
 
 @keyframes zoom-in-out {
@@ -76,6 +87,25 @@ input {
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 .btn_hotline {
@@ -1126,6 +1156,10 @@ input {
   color: #FE6A84;
 }
 .danhmucocv .btn_confirm_a {
+  display: flex;
+  justify-content: center;
+  transition: all 0.25s;
+  align-items: center;
   width: 20px;
   height: 20px;
   border: 2px solid #FE6A84;
@@ -1167,6 +1201,12 @@ input {
   align-items: center;
   border-radius: 20px;
   margin-left: 10px;
+  transition: all 0.15s;
+}
+.danhmucocv .btn_delete:hover {
+  border: 2px solid #FE6A84;
+  background-color: white;
+  color: #FE6A84;
 }
 .danhmucocv .adjust_stock {
   height: 40px;
@@ -1188,6 +1228,7 @@ input {
   margin: 10px;
 }
 .danhmucocv .adjust_stock button {
+  transition: all 0.15s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1197,6 +1238,14 @@ input {
   border-radius: 20%;
   color: white;
   font-weight: 700;
+}
+.danhmucocv .adjust_stock button:hover {
+  border: 2px solid #FE6A84;
+  background-color: white;
+  color: #FE6A84;
+}
+.danhmucocv .adjust_stock button:hover:active {
+  transform: scale(1.01);
 }
 
 /*# sourceMappingURL=style.css.map */
